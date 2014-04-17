@@ -2,6 +2,8 @@
 
 This ruby gem allows you to quickly and more easily generate SendGrid X-SMTPAPI headers.
 
+[![Build Status](https://travis-ci.org/SendGridJP/smtpapi-ruby.svg?branch=master)](https://travis-ci.org/SendGridJP/smtpapi-ruby)
+
 ## Installation
 
 Add this line to your application's Gemfile:
