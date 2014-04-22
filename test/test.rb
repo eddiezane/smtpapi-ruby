@@ -96,9 +96,9 @@ class SmtpapiTest < Test::Unit::TestCase
 
   def test_add_category_unicode
     header = Smtpapi::Header.new
-    header.add_category('天破活殺') # category = ['天破活殺']
-    header.add_category('南斗鳳凰拳') # category = ['天破活殺', '南斗鳳凰拳']
-    assert_equal("{\"category\":[\"\\u5929\\u7834\\u6d3b\\u6bba\",\"\\u5357\\u6597\\u9cf3\\u51f0\\u62f3\"]}",header.json_string)
+    header.add_category('天破活殺')    # category = ['天破活殺']
+    header.add_category('天翔十字鳳')  # category = ['天破活殺', '天翔十字鳳']
+    assert_equal("{\"category\":[\"\\u5929\\u7834\\u6d3b\\u6bba\",\"\\u5929\\u7fd4\\u5341\\u5b57\\u9cf3\"]}",header.json_string)
   end
 
 end
