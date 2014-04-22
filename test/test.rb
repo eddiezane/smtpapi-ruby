@@ -3,6 +3,11 @@ require "test/unit"
 require "./lib/smtpapi"
 
 class SmtpapiTest < Test::Unit::TestCase
+
+  def test_version
+    assert_equal("0.0.2", Smtpapi::VERSION)
+  end
+
   def test_empty
     header = Smtpapi::Header.new
     assert_equal("{}",header.json_string)
