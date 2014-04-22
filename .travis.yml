@@ -8,8 +8,3 @@ before_script:
   - bundle install
 script:
   - rake test
-notifications:
-  emails:
-    - awwa500@gmail.com
-  on_success: always
-  on_failure: always
