@@ -148,12 +148,3 @@ The existing tests in the `test` directory can be run using test gem with the fo
 ```bash
 rake test
 ```
-
-or if you already test gem installed.
-
-```bash
-cd test
-ruby test.rb
-```
-
-
