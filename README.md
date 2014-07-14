@@ -26,13 +26,13 @@ Or install it yourself as:
 header = Smtpapi::Header.new
 ```
 
-### json_string
+### to_json
 
-This gives you back the stringified json formatted X-SMTPAPI header. 
+This gives you back the stringified json formatted X-SMTPAPI header.
 
 ```ruby
 header = Smtpapi::Header.new
-header.json_string
+header.to_json
 ```
 
 ### add_to
@@ -122,14 +122,14 @@ header.add_filter('footer', 'text/html', '<strong>boo</strong>')
 
 ```ruby
 header    = Smtpapi::Header.new
-filter = { 
-  'footer' => { 
-    'setting' => { 
+filter = {
+  'footer' => {
+    'setting' => {
       'enable' => 1,
       "text/plain" => 'You can haz footers!'
     }
   }
-} 
+}
 header.set_filters(filter)
 ```
 
