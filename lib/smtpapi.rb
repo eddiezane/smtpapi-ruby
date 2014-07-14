@@ -96,6 +96,7 @@ module Smtpapi
     def json_string
       escape_unicode(self.to_array.to_json)
     end
+    alias_method :to_json, :json_string
 
     def escape_unicode(str)
       str.unpack('U*').map{|i| i > 127 ? "\\u#{i.to_s(16)}" : i.chr("UTF-8")}.join
