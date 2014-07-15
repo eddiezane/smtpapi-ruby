@@ -43,7 +43,7 @@ header.add_to('you@youremail.com')
 header.add_to('other@otheremail.com')
 ```
 
-### set_to
+### set_tos
 
 ```ruby
 header    = Smtpapi::Header.new
