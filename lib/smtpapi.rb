@@ -6,7 +6,7 @@ require "json"
 module Smtpapi
   class Header
 
-    attr_reader :to, :sub, :section, :category, :unique_args, :filters
+    attr_reader :to, :sub, :section, :category, :unique_args, :filters, :send_all, :send_each_at
 
     def initialize
       @to = []
@@ -15,6 +15,8 @@ module Smtpapi
       @category = []
       @unique_args = {}
       @filters = {}
+      @send_all = nil
+      @send_each_at = []
     end
 
     def add_to(address, name=nil)
@@ -81,6 +83,14 @@ module Smtpapi
       self
     end
 
+    def set_send_all(send_all)
+      @send_all = send_all
+    end
+
+    def set_send_each_at(send_each_at)
+      @send_each_at = send_each_at
+    end
+
     def to_array
       data = {}
       data["to"]  = @to     if @to.length > 0
@@ -89,6 +99,12 @@ module Smtpapi
       data["unique_args"] = @unique_args if @unique_args.length > 0
       data["category"]  = @category   if @category.length > 0
       data["filters"]   = @filters  if @filters.length > 0
+      data["send_all"] = @send_all.to_i.to_s if @send_all != nil
+      str_each_at = []
+      @send_each_at.each {|val|
+        str_each_at.push(val.to_i.to_s)
+      }
+      data["send_each_at"] = str_each_at if str_each_at.length > 0
       data
     end
     protected :to_array

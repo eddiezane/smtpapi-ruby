@@ -5,7 +5,7 @@ require "./lib/smtpapi"
 class SmtpapiTest < Test::Unit::TestCase
 
   def test_version
-    assert_equal("0.0.3", Smtpapi::VERSION)
+    assert_equal("0.0.4", Smtpapi::VERSION)
   end
 
   def test_empty
@@ -104,6 +104,24 @@ class SmtpapiTest < Test::Unit::TestCase
     header.add_category('天破活殺')    # category = ['天破活殺']
     header.add_category('天翔十字鳳')  # category = ['天破活殺', '天翔十字鳳']
     assert_equal("{\"category\":[\"\\u5929\\u7834\\u6d3b\\u6bba\",\"\\u5929\\u7fd4\\u5341\\u5b57\\u9cf3\"]}",header.json_string)
+  end
+
+  def test_sent_send_all
+    header = Smtpapi::Header.new
+    localtime = Time.local(2014, 8, 29, 17, 56, 35)
+    header.set_send_all(localtime)
+
+    assert_equal("{\"send_all\":\"1409302595\"}", header.json_string)
+  end
+
+  def test_send_each_at
+    header = Smtpapi::Header.new
+    localtime1 = Time.local(2014,  8, 29, 17, 56, 35)
+    localtime2 = Time.local(2013, 12, 31,  0,  0,  0)
+    localtime3 = Time.local(2015,  9,  1,  4,  5,  6)
+    header.set_send_each_at([localtime1, localtime2, localtime3])
+
+    assert_equal("{\"send_each_at\":[\"1409302595\",\"1388415600\",\"1441047906\"]}", header.json_string)
   end
 
 end
