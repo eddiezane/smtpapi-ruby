@@ -133,24 +133,6 @@ filter = {
 header.set_filters(filter)
 ```
 
-### set_send_all
-
-```ruby
-header    = Smtpapi::Header.new
-lt = Time.local(2014, 8, 29, 17, 56, 35)
-header.set_send_all(lt)
-```
-
-### set_send_each_at
-
-```ruby
-header    = Smtpapi::Header.new
-lt1       = Time.local(2014,  8, 29, 17, 56, 35)
-lt2       = Time.local(2013, 12, 31,  0,  0,  0)
-lt3       = Time.local(2015,  9,  1,  4,  5,  6)
-header.set_send_each_at([lt1, lt2, lt3])
-```
-
 ## Contributing
 
 1. Fork it ( http://github.com/sendgridjp/smtpapi-ruby/fork )
