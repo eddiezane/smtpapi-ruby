@@ -5,7 +5,7 @@ require "./lib/smtpapi"
 class SmtpapiTest < Test::Unit::TestCase
 
   def test_version
-    assert_equal("0.0.4", Smtpapi::VERSION)
+    assert_equal("0.0.5", Smtpapi::VERSION)
   end
 
   def test_empty
@@ -106,12 +106,12 @@ class SmtpapiTest < Test::Unit::TestCase
     assert_equal("{\"category\":[\"\\u5929\\u7834\\u6d3b\\u6bba\",\"\\u5929\\u7fd4\\u5341\\u5b57\\u9cf3\"]}",header.json_string)
   end
 
-  def test_sent_send_all
+  def test_sent_send_at
     header = Smtpapi::Header.new
     localtime = Time.local(2014, 8, 29, 17, 56, 35)
-    header.set_send_all(localtime)
+    header.set_send_at(localtime)
 
-    assert_equal("{\"send_all\":\"#{localtime.to_i}\"}", header.json_string)
+    assert_equal("{\"send_at\":\"#{localtime.to_i}\"}", header.json_string)
   end
 
   def test_send_each_at
