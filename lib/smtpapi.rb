@@ -99,10 +99,10 @@ module Smtpapi
       data["unique_args"] = @unique_args if @unique_args.length > 0
       data["category"]  = @category   if @category.length > 0
       data["filters"]   = @filters  if @filters.length > 0
-      data["send_at"] = @send_at.to_i.to_s if @send_at != nil
+      data["send_at"] = @send_at.to_i if @send_at != nil
       str_each_at = []
       @send_each_at.each {|val|
-        str_each_at.push(val.to_i.to_s)
+        str_each_at.push(val.to_i)
       }
       data["send_each_at"] = str_each_at if str_each_at.length > 0
       data
