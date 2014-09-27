@@ -20,9 +20,13 @@ module Smtpapi
     end
 
     def add_to(address, name=nil)
-      value = address
-      value = "#{name} <#{address}>" if name != nil
-      @to.push(value)
+      if address.is_a?(Array)
+        @to.concat(address)
+      else
+        value = address
+        value = "#{name} <#{address}>" if name != nil
+        @to.push(value)
+      end
       self
     end
 
