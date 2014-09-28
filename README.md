@@ -39,15 +39,16 @@ header.to_json
 
 ```ruby
 header    = Smtpapi::Header.new
-header.add_to('you@youremail.com')
-header.add_to('other@otheremail.com')
+header.add_to('you@youremail.com')                            # to => ['you@youremail.com']
+header.add_to('other@otheremail.com', 'other')                # to => ['you@youremail.com', 'other <other@otheremail.com>']
+header.add_to(['you@youremail.com', 'other@otheremail.com'])  # to => ['you@youremail.com', 'other <other@otheremail.com>', 'you@youremail.com', 'other@otheremail.com']
 ```
 
 ### set_tos
 
 ```ruby
 header    = Smtpapi::Header.new
-header.set_tos(['you@youremail.com', 'other@otheremail.com'])
+header.set_tos(['you@youremail.com', 'other@otheremail.com']) # to => ['you@youremail.com', 'other@otheremail.com']
 ```
 
 ### add_substitution

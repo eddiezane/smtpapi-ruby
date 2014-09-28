@@ -5,7 +5,7 @@ require "./lib/smtpapi"
 class SmtpapiTest < Test::Unit::TestCase
 
   def test_version
-    assert_equal("0.0.6", Smtpapi::VERSION)
+    assert_equal("0.0.7", Smtpapi::VERSION)
   end
 
   def test_empty
@@ -18,6 +18,12 @@ class SmtpapiTest < Test::Unit::TestCase
     header.add_to('you@youremail.com')
     header.add_to('other@otheremail.com', 'Other Name')
     assert_equal("{\"to\":[\"you@youremail.com\",\"Other Name <other@otheremail.com>\"]}",header.json_string)
+  end
+
+  def test_add_to_array
+    header = Smtpapi::Header.new
+    header.add_to(['you@youremail.com', 'my@myemail.com'])
+    assert_equal("{\"to\":[\"you@youremail.com\",\"my@myemail.com\"]}",header.json_string)
   end
 
   def test_set_tos
