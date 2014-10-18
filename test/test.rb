@@ -130,4 +130,11 @@ class SmtpapiTest < Test::Unit::TestCase
     assert_equal("{\"send_each_at\":[#{localtime1.to_i},#{localtime2.to_i},#{localtime3.to_i}]}", header.json_string)
   end
 
+  def test_asm_group_id
+    header = Smtpapi::Header.new
+    header.set_asm_group(2)
+    
+    assert_equal("{\"asm_group_id\":2}", header.json_string)
+  end
+
 end

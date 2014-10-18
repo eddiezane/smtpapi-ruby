@@ -6,7 +6,7 @@ require "json"
 module Smtpapi
   class Header
 
-    attr_reader :to, :sub, :section, :category, :unique_args, :filters, :send_at, :send_each_at
+    attr_reader :to, :sub, :section, :category, :unique_args, :filters, :send_at, :send_each_at, :asm_group_id
 
     def initialize
       @to = []
@@ -17,6 +17,7 @@ module Smtpapi
       @filters = {}
       @send_at = nil
       @send_each_at = []
+      @asm_group_id = nil
     end
 
     def add_to(address, name=nil)
@@ -95,6 +96,10 @@ module Smtpapi
       @send_each_at = send_each_at
     end
 
+    def set_asm_group(group_id)
+      @asm_group_id = group_id
+    end
+
     def to_array
       data = {}
       data["to"]  = @to     if @to.length > 0
@@ -104,6 +109,7 @@ module Smtpapi
       data["category"]  = @category   if @category.length > 0
       data["filters"]   = @filters  if @filters.length > 0
       data["send_at"] = @send_at.to_i if @send_at != nil
+      data["asm_group_id"] = @asm_group_id.to_i if @asm_group_id != nil
       str_each_at = []
       @send_each_at.each {|val|
         str_each_at.push(val.to_i)
