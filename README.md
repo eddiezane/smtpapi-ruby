@@ -55,8 +55,8 @@ header.set_tos(['you@youremail.com', 'other@otheremail.com']) # to => ['you@your
 
 ```ruby
 header    = Smtpapi::Header.new
-header.add_substitution('keep', array('secret'))        # sub = {keep: ['secret']}
-header.add_substitution('other', array('one', 'two'))   # sub = {keep: ['secret'], other: ['one', 'two']}
+header.add_substitution('keep', ['secret'])        # sub = {keep: ['secret']}
+header.add_substitution('other', ['one', 'two'])   # sub = {keep: ['secret'], other: ['one', 'two']}
 ```
 
 ### set_substitutions
@@ -100,8 +100,8 @@ header.set_categories(['tactics', 'advanced']) # category = ['tactics', 'advance
 
 ```ruby
 header    = Smtpapi::Header.new
-header.add_section('-charge-', 'This ship is useless.'])
-header.add_section('-bomber-', 'Only for sad vikings.'])
+header.add_section('-charge-', 'This ship is useless.')
+header.add_section('-bomber-', 'Only for sad vikings.')
 ```
 
 ### set_sections
