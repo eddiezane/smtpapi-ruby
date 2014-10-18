@@ -5,7 +5,7 @@ require "./lib/smtpapi"
 class SmtpapiTest < Test::Unit::TestCase
 
   def test_version
-    assert_equal("0.0.7", Smtpapi::VERSION)
+    assert_equal("0.0.8", Smtpapi::VERSION)
   end
 
   def test_empty
@@ -133,7 +133,7 @@ class SmtpapiTest < Test::Unit::TestCase
   def test_asm_group_id
     header = Smtpapi::Header.new
     header.set_asm_group(2)
-    
+
     assert_equal("{\"asm_group_id\":2}", header.json_string)
   end
 
