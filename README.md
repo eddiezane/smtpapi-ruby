@@ -32,8 +32,7 @@ This gives you back the stringified json formatted X-SMTPAPI header.
 
 ```ruby
 header = Smtpapi::Header.new
-header.to_json          # Unicode Escaped
-header.to_json(false)   # NO Unicode Escaped
+header.to_json
 ```
 
 ### add_to
