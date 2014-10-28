@@ -119,8 +119,12 @@ module Smtpapi
     end
     protected :to_array
 
-    def json_string
-      escape_unicode(self.to_array.to_json)
+    def json_string(escape=true)
+      if escape then
+        escape_unicode(self.to_array.to_json)
+      else
+        self.to_array.to_json
+      end
     end
     alias_method :to_json, :json_string
 
