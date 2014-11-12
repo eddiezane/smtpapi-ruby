@@ -5,7 +5,7 @@ require "./lib/smtpapi"
 class SmtpapiTest < Test::Unit::TestCase
 
   def test_version
-    assert_equal("0.0.8", Smtpapi::VERSION)
+    assert_equal("0.0.9", Smtpapi::VERSION)
   end
 
   def test_empty
@@ -110,6 +110,8 @@ class SmtpapiTest < Test::Unit::TestCase
     header.add_category('天破活殺')    # category = ['天破活殺']
     header.add_category('天翔十字鳳')  # category = ['天破活殺', '天翔十字鳳']
     assert_equal("{\"category\":[\"\\u5929\\u7834\\u6d3b\\u6bba\",\"\\u5929\\u7fd4\\u5341\\u5b57\\u9cf3\"]}",header.json_string)
+    header.add_category('鼖')         # category = ['天破活殺', '天翔十字鳳', '鼖']
+    assert_equal("{\"category\":[\"\\u5929\\u7834\\u6d3b\\u6bba\",\"\\u5929\\u7fd4\\u5341\\u5b57\\u9cf3\",\"\\ud87e\\ude1b\"]}",header.json_string)
   end
 
   def test_sent_send_at
