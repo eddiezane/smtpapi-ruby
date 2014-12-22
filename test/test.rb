@@ -139,4 +139,10 @@ class SmtpapiTest < Test::Unit::TestCase
     assert_equal("{\"asm_group_id\":2}", header.json_string)
   end
 
+  def test_ip_pool
+    header = Smtpapi::Header.new
+    header.set_ip_pool("test_pool")
+
+    assert_equal("{\"ip_pool\":\"test_pool\"}", header.json_string)
+  end
 end
