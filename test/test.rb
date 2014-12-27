@@ -5,7 +5,7 @@ require "./lib/smtpapi"
 class SmtpapiTest < Test::Unit::TestCase
 
   def test_version
-    assert_equal("0.0.9", Smtpapi::VERSION)
+    assert_equal("0.0.10", Smtpapi::VERSION)
   end
 
   def test_empty

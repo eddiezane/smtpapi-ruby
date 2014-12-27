@@ -161,6 +161,14 @@ header = Smtpapi::Header.new
 header.set_asm_group(2)
 ```
 
+### set_ip_pool
+
+[Using IP Pools with the SMTP API Header](https://sendgrid.com/docs/API_Reference/Web_API_v3/IP_Management/ip_pools.html)
+```ruby
+header = Smtpapi::Header.new
+header.set_ip_pool("test_pool")
+```
+
 ## Contributing
 
 1. Fork it ( http://github.com/sendgridjp/smtpapi-ruby/fork )
