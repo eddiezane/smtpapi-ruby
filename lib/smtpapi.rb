@@ -133,9 +133,9 @@ module Smtpapi
     def escape_unicode(str)
       str.unpack('U*').map{|i|
         if i > 65535 then
-          "\\u#{((i - 0x10000) / 0x400 + 0xD800).to_s(16)}\\u#{((i - 0x10000) % 0x400 + 0xDC00).to_s(16)}" if i > 65535
+          "\\u#{"%04x" % ((i - 0x10000) / 0x400 + 0xD800)}\\u#{"%04x" % ((i - 0x10000) % 0x400 + 0xDC00)}" if i > 65535
         elsif i > 127 then
-          "\\u#{i.to_s(16)}"
+          "\\u#{"%04x" % i}"
         else
           i.chr("UTF-8")
         end
