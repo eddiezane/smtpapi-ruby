@@ -1,12 +1,15 @@
 # -*- encoding: utf-8 -*-
-$:.unshift File.dirname(__FILE__)
-require "smtpapi/version"
-require "json"
+$LOAD_PATH.unshift File.dirname(__FILE__)
+require 'smtpapi/version'
+require 'json'
 
 module Smtpapi
+  #
+  # SendGrid smtpapi header implementation
+  #
   class Header
-
-    attr_reader :to, :sub, :section, :category, :unique_args, :filters, :send_at, :send_each_at, :asm_group_id, :ip_pool
+    attr_reader :to, :sub, :section, :category, :unique_args, :filters
+    attr_reader :send_at, :send_each_at, :asm_group_id, :ip_pool
 
     def initialize
       @to = []
@@ -21,12 +24,12 @@ module Smtpapi
       @ip_pool = nil
     end
 
-    def add_to(address, name=nil)
+    def add_to(address, name = nil)
       if address.is_a?(Array)
         @to.concat(address)
       else
         value = address
-        value = "#{name} <#{address}>" if name != nil
+        value = "#{name} <#{address}>" unless name.nil?
         @to.push(value)
       end
       self
@@ -78,8 +81,10 @@ module Smtpapi
     end
 
     def add_filter(filter_name, parameter_name, parameter_value)
-      @filters[filter_name] = {}    if @filters[filter_name] == nil
-      @filters[filter_name]['settings'] = {}  if @filters[filter_name]['settings'] == nil
+      @filters[filter_name] = {} if @filters[filter_name].nil?
+      if @filters[filter_name]['settings'].nil?
+        @filters[filter_name]['settings'] = {}
+      end
       @filters[filter_name]['settings'][parameter_name] = parameter_value
       self
     end
@@ -91,56 +96,61 @@ module Smtpapi
 
     def set_send_at(send_at)
       @send_at = send_at
+      self
     end
 
     def set_send_each_at(send_each_at)
       @send_each_at = send_each_at
+      self
     end
 
     def set_asm_group(group_id)
       @asm_group_id = group_id
+      self
     end
 
     def set_ip_pool(pool_name)
       @ip_pool = pool_name
+      self
     end
 
     def to_array
       data = {}
-      data["to"]  = @to     if @to.length > 0
-      data["sub"]   = @sub    if @sub.length > 0
-      data["section"]   = @section  if @section.length > 0
-      data["unique_args"] = @unique_args if @unique_args.length > 0
-      data["category"]  = @category   if @category.length > 0
-      data["filters"]   = @filters  if @filters.length > 0
-      data["send_at"] = @send_at.to_i if @send_at != nil
-      data["asm_group_id"] = @asm_group_id.to_i if @asm_group_id != nil
-      data["ip_pool"] = @ip_pool if @ip_pool != nil
+      data['to'] = @to if @to.length > 0
+      data['sub'] = @sub if @sub.length > 0
+      data['section'] = @section if @section.length > 0
+      data['unique_args'] = @unique_args if @unique_args.length > 0
+      data['category'] = @category if @category.length > 0
+      data['filters'] = @filters if @filters.length > 0
+      data['send_at'] = @send_at.to_i unless @send_at.nil?
+      data['asm_group_id'] = @asm_group_id.to_i unless @asm_group_id.nil?
+      data['ip_pool'] = @ip_pool unless @ip_pool.nil?
       str_each_at = []
-      @send_each_at.each {|val|
+      @send_each_at.each do |val|
         str_each_at.push(val.to_i)
-      }
-      data["send_each_at"] = str_each_at if str_each_at.length > 0
+      end
+      data['send_each_at'] = str_each_at if str_each_at.length > 0
       data
     end
+
     protected :to_array
 
     def json_string
-      escape_unicode(self.to_array.to_json)
+      escape_unicode(to_array.to_json)
     end
     alias_method :to_json, :json_string
 
     def escape_unicode(str)
-      str.unpack('U*').map{|i|
-        if i > 65535 then
-          "\\u#{"%04x" % ((i - 0x10000) / 0x400 + 0xD800)}\\u#{"%04x" % ((i - 0x10000) % 0x400 + 0xDC00)}" if i > 65535
-        elsif i > 127 then
-          "\\u#{"%04x" % i}"
+      str.unpack('U*').map do |i|
+        if i > 65_535
+          "\\u#{format('%04x', ((i - 0x10000) / 0x400 + 0xD800))}"\
+          "\\u#{format('%04x', ((i - 0x10000) % 0x400 + 0xDC00))}" if i > 65_535
+        elsif i > 127
+          "\\u#{format('%04x', i)}"
         else
-          i.chr("UTF-8")
+          i.chr('UTF-8')
         end
-      }.join
+      end.join
     end
-
   end
 end
