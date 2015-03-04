@@ -1,25 +1,26 @@
-# メソッド名のprefixに「set_」「get_」を許可
+# Allow "set_" and "get_" for prefix of method
 AccessorMethodName:
   Enabled: false
 
-# メソッドの行数上限を変更
+# Increase max line number of method
 MethodLength:
   CountComments: true  # count full line comments?
   Max: 20
 
-# 引数上限を変更
+# Increase the number of params
 ParameterLists:
   Max: 6
   CountKeywordArgs: true
 
-# AbcSizeの上限を変更
+# Increase the max AbcSize
 AbcSize:
   Max: 34
 
-# %r 内で利用できるスラッシュの数の制限変更
+# Increase max number of "/" in %r
 RegexpLiteral:
   MaxSlashes: 0
 
+# Increase the max line number of class
 ClassLength:
   Max: 200
   CountComments: true
