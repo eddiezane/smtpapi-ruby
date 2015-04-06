@@ -6,11 +6,11 @@ require 'smtpapi/version'
 Gem::Specification.new do |spec|
   spec.name          = 'smtpapi'
   spec.version       = Smtpapi::VERSION
-  spec.authors       = ['Wataru Sato']
-  spec.email         = ['awwa500@gmail.com']
+  spec.authors       = ['Wataru Sato', 'SendGrid']
+  spec.email         = ['awwa500@gmail.com', 'community@sendgrid.com']
   spec.summary       = 'Smtpapi library for SendGrid.'
   spec.description   = 'Smtpapi library for SendGrid.'
-  spec.homepage      = 'https://github.com/sendgridjp/smtpapi-ruby'
+  spec.homepage      = 'https://github.com/sendgrid/smtpapi-ruby'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
