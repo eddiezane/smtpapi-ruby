@@ -6,3 +6,12 @@ before_script:
 script:
   - rubocop --fail-level=W
   - rake test
+notifications:
+  hipchat:
+    rooms:
+      secure: DVMCsQCZ8423LAv6S4qd0d//7Rks/YeWhWDFfJNCoJUz2ilYnnZgjrwcwBecEaymW5AcpPrGO7Bu0Kls+S0qnm91drCm7XdDVRm59aY4YTUQ3zyjPO4Ntdd2njP36G3+/LtmRlKaJOLfXWmCkuTG4jBdMOjmvwLagMgRdrcW9Xs=
+    template:
+    - '<a href="https://travis-ci.org/%{repository}/builds/%{build_id}">%{repository}
+      Build %{build_number}</a> on branch <i>%{branch}</i> by %{author}: <strong>%{message}</strong>
+      <a href="https://github.com/%{repository}/commits/%{commit}">View on GitHub</a>'
+    format: html
