@@ -64,6 +64,7 @@ We welcome direct contributions to the smtpapi-ruby code base. Thank you!
 
 ##### Prerequisites #####
 
+- Ruby version 2.2
 - The SendGrid Service, starting at the [free level](https://sendgrid.com/free?source=smtpapi-ruby))
 
 ##### Initial setup: #####

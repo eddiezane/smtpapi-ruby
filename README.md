@@ -9,6 +9,13 @@ All updates to this library is documented in our [CHANGELOG](https://github.com/
 
 # Installation
 
+## Prerequisites
+
+- Ruby version 2.2
+- The SendGrid service, starting at the [free level](https://sendgrid.com/free?source=smtpapi-ruby)
+
+## Install Package
+
 Add this line to your application's Gemfile:
 
 ```bash
@@ -26,10 +33,6 @@ Or install it yourself as:
 ```bash
 gem install smtpapi
 ```
-
-## Dependencies
-
-- The SendGrid Service, starting at the [free level](https://sendgrid.com/free?source=smtpapi-ruby))
 
 # Quick Start
 
