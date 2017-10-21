@@ -1,7 +1,7 @@
 ![SendGrid Logo](https://uiux.s3.amazonaws.com/2016-logos/email-logo%402x.png)
 
 [![Build Status](https://travis-ci.org/sendgrid/smtpapi-ruby.svg?branch=master)](https://travis-ci.org/SendGrid/smtpapi-ruby)
-[![Email Notifications Badge](https://dx.sendgrid.com/badge/php)](https://dx.sendgrid.com/newsletter/php)
+[![Email Notifications Badge](https://dx.sendgrid.com/badge/ruby)](https://dx.sendgrid.com/newsletter/ruby)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.txt)
 
 **This ruby gem allows you to quickly and more easily generate SendGrid X-SMTPAPI headers.**
