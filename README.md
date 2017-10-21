@@ -1,3 +1,4 @@
+![SendGrid Logo](https://uiux.s3.amazonaws.com/2016-logos/email-logo%402x.png)
 [![Build Status](https://travis-ci.org/sendgrid/smtpapi-ruby.svg?branch=master)](https://travis-ci.org/SendGrid/smtpapi-ruby)
 
 **This ruby gem allows you to quickly and more easily generate SendGrid X-SMTPAPI headers.**
@@ -72,4 +73,4 @@ smtpapi-ruby is guided and supported by the SendGrid [Developer Experience Team]
 
 smtpapi-ruby is maintained and funded by SendGrid, Inc. The names and logos for smtpapi-ruby are trademarks of SendGrid, Inc.
 
-![SendGrid Logo](https://uiux.s3.amazonaws.com/2016-logos/email-logo%402x.png)
+
