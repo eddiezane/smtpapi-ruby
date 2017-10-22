@@ -13,6 +13,13 @@
 
 All updates to this library is documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-ruby/blob/master/CHANGELOG.md).
 
+# Table of Contents
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Usage](#usage)
+- [About](#about)
+
+<a name="installation"></a>
 # Installation
 
 ## Prerequisites
@@ -40,6 +47,7 @@ Or install it yourself as:
 gem install smtpapi
 ```
 
+<a name="quick-start"></a>
 # Quick Start
 
 ```ruby
@@ -48,6 +56,7 @@ header.add_to('test@example.com')
 print header.to_json
 ```
 
+<a name="usage"></a>
 # Usage
 
 - [SendGrid Docs](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
@@ -72,6 +81,7 @@ Quick links:
 
 This library was created by [Wataru Sato](https://github.com/awwa) and is now maintained by SendGrid.
 
+<a name="about"></a>
 # About
 
 smtpapi-ruby is guided and supported by the SendGrid [Developer Experience Team](mailto:dx@sendgrid.com).
