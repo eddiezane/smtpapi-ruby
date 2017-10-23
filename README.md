@@ -17,7 +17,10 @@ All updates to this library is documented in our [CHANGELOG](https://github.com/
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Usage](#usage)
+- [Roadmap](#roadmap)
+- [How to Contribute](#contribute)
 - [About](#about)
+- [License](#license)
 
 <a name="installation"></a>
 # Installation
@@ -62,11 +65,13 @@ print header.to_json
 - [SendGrid Docs](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
 - [Example Code](https://github.com/sendgrid/smtpapi-ruby/blob/master/examples)
 
-## Roadmap
+<a name="roadmap"></a>
+# Roadmap
 
 If you are interested in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/smtpapi-ruby/milestones). We would love to hear your feedback.
 
-## How to Contribute
+<a name="contribute"></a>
+# How to Contribute
 
 We encourage contribution to our libraries, please see our [CONTRIBUTING](https://github.com/sendgrid/smtpapi-ruby/blob/master/CONTRIBUTING.md) guide for details.
 
@@ -88,4 +93,6 @@ smtpapi-ruby is guided and supported by the SendGrid [Developer Experience Team]
 
 smtpapi-ruby is maintained and funded by SendGrid, Inc. The names and logos for smtpapi-ruby are trademarks of SendGrid, Inc.
 
-
+<a name="license"></a>
+# License
+[The MIT License (MIT)](LICENSE.txt)
