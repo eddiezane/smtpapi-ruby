@@ -18,6 +18,7 @@ All updates to this library is documented in our [CHANGELOG](https://github.com/
 - [Quick Start](#quick-start)
 - [Usage](#usage)
 - [About](#about)
+- [License](#license)
 
 <a name="installation"></a>
 # Installation
@@ -88,4 +89,6 @@ smtpapi-ruby is guided and supported by the SendGrid [Developer Experience Team]
 
 smtpapi-ruby is maintained and funded by SendGrid, Inc. The names and logos for smtpapi-ruby are trademarks of SendGrid, Inc.
 
-
+<a name="license"></a>
+# License
+[The MIT License (MIT)](LICENSE.txt)
