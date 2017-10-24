@@ -95,4 +95,5 @@ smtpapi-ruby is maintained and funded by SendGrid, Inc. The names and logos for 
 
 <a name="license"></a>
 # License
+
 [The MIT License (MIT)](LICENSE.txt)
