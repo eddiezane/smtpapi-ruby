@@ -34,7 +34,7 @@ If you'd like to make a feature request, please read this section.
 The GitHub issue tracker is the preferred channel for library feature requests, but please respect the following restrictions:
 
 - Please **search for existing issues** in order to ensure we don't have duplicate bugs/feature requests.
-- Please be respectful and considerate of others when commenting on issues
+- Please be respectful and considerate of others when commenting on issues.
 
 <a name="submit-a-bug-report"></a>
 ## Submit a Bug Report
@@ -46,8 +46,8 @@ A software bug is a demonstrable issue in the code base. In order for us to diag
 Before you decide to create a new issue, please try the following:
 
 1. Check the Github issues tab if the identified issue has already been reported, if so, please add a +1 to the existing post.
-2. Update to the latest version of this code and check if issue has already been fixed
-3. Copy and fill in the Bug Report Template we have provided below
+2. Update to the latest version of this code and check if the issue has already been fixed.
+3. Copy and fill in the Bug Report Template we have provided below.
 
 ### Please use our Bug Report Template
 
