@@ -55,8 +55,6 @@ gem install smtpapi
 ### Initial Setup
 
 ```bash
-git clone https://github.com/sendgrid/smtpapi-ruby.git
-cd smtpapi-ruby
 cp .env_sample .env
 ```
 
