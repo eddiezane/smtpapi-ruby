@@ -1,0 +1,17 @@
+engines:
+  rubocop:
+    enabled: true
+    #checks:
+    #	Rubocop/Metrics/ClassLength:
+    #  	enabled: false
+  duplication:
+  	enabled: true
+    config:
+    	languages:
+      - ruby
+ratings:
+  paths:
+  - "**.rb"
+exclude_paths:
+- examples/
+- test/
