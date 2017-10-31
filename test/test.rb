@@ -203,7 +203,7 @@ class SmtpapiTest < Test::Unit::TestCase
   end
 
   def test_docker_exists
-    assert(File.file?('./Docker') || File.file?('./docker/Docker'))
+    assert(File.file?('./Dockerfile') || File.file?('./docker/Dockerfile'))
   end
 
   def test_docker_compose_exists
@@ -243,7 +243,7 @@ class SmtpapiTest < Test::Unit::TestCase
   end
 
   def test_license_exists
-    assert(File.file?('./LICENSE.md'))
+    assert(File.file?('./LICENSE.md') || File.file?('./LICENSE.txt'))
   end
 
   def test_pull_request_template_exists
