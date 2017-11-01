@@ -264,6 +264,7 @@ class SmtpapiTest < Test::Unit::TestCase
 
   def test_use_cases_exists
     assert(File.file?('./USE_CASES.md'))
+  end
 
   def test_license_date_is_updated
     license_end_year = IO.read('LICENSE.txt').match(/Copyright \(c\) \d{4}-(\d{4}) SendGrid/)[1]
