@@ -202,6 +202,70 @@ class SmtpapiTest < Test::Unit::TestCase
     assert_equal('{"ip_pool":"test_pool"}', header.json_string)
   end
 
+  def test_docker_exists
+    assert(File.file?('./Dockerfile') || File.file?('./docker/Dockerfile'))
+  end
+
+  def test_docker_compose_exists
+    assert(File.file?('./docker-compose.yml') || File.file?('./docker/docker-compose.yml'))
+  end
+
+  def test_env_sample_exists
+    assert(File.file?('./.env_sample'))
+  end
+
+  def test_gitignore_exists
+    assert(File.file?('./.gitignore'))
+  end
+
+  def test_travis_exists
+    assert(File.file?('./.travis.yml'))
+  end
+
+  def test_codeclimate_exists
+    assert(File.file?('./.codeclimate.yml'))
+  end
+
+  def test_changelog_exists
+    assert(File.file?('./CHANGELOG.md'))
+  end
+
+  def test_code_of_conduct_exists
+    assert(File.file?('./CODE_OF_CONDUCT.md'))
+  end
+
+  def test_contributing_exists
+    assert(File.file?('./CONTRIBUTING.md'))
+  end
+
+  def test_issue_template_exists
+    assert(File.file?('./.github/ISSUE_TEMPLATE'))
+  end
+
+  def test_license_exists
+    assert(File.file?('./LICENSE.md') || File.file?('./LICENSE.txt'))
+  end
+
+  def test_pull_request_template_exists
+    assert(File.file?('./.github/PULL_REQUEST_TEMPLATE'))
+  end
+
+  def test_readme_exists
+    assert(File.file?('./README.md'))
+  end
+
+  def test_troubleshooting_exists
+    assert(File.file?('./TROUBLESHOOTING.md'))
+  end
+
+  def test_usage_exists
+    assert(File.file?('./USAGE.md'))
+  end
+
+  def test_use_cases_exists
+    assert(File.file?('./USE_CASES.md'))
+  end
+
   def test_license_date_is_updated
     license_end_year = IO.read('LICENSE.txt').match(/Copyright \(c\) \d{4}-(\d{4}) SendGrid/)[1]
     current_year = Time.new.year
