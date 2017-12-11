@@ -126,10 +126,13 @@ module Smtpapi
       data['asm_group_id'] = @asm_group_id.to_i unless @asm_group_id.nil?
       data['ip_pool'] = @ip_pool unless @ip_pool.nil?
       str_each_at = []
+      
       @send_each_at.each do |val|
         str_each_at.push(val.to_i)
       end
+      
       data['send_each_at'] = str_each_at if !str_each_at.empty?
+      
       data
     end
 
