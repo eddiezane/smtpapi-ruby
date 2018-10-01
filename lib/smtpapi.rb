@@ -140,7 +140,7 @@ module Smtpapi
     def json_string
       escape_unicode(to_array.to_json)
     end
-    alias to_json json_string
+    alias_method :to_json, :json_string
 
     def escape_unicode(str)
       str.unpack('U*').map do |i|
