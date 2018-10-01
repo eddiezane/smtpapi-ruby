@@ -14,7 +14,7 @@ header.add_to('test2@example.com', 'other')
 # sub = {keep: ['secret']}
 header.add_substitution('keep', ['secret'])
 # sub = {keep: ['secret'], other: ['one', 'two']}
-header.add_substitution('other', %w[one two])
+header.add_substitution('other', %w(one two))
 
 ## set_substitutions
 # header.set_substitutions({'keep' => 'secret'})  # sub = {keep: ['secret']}
@@ -69,11 +69,13 @@ header.set_send_at(lt)
 # header.set_send_each_at([lt1, lt2, lt3])
 
 ## asm_group_id
-# This is to specify an [ASM Group](https://sendgrid.com/docs/User_Guide/advanced_suppression_manager.html) for the message.
+# This is to specify an ASM Group for the message.
+# See: https://sendgrid.com/docs/User_Guide/advanced_suppression_manager.html
 header.set_asm_group(2)
 
 ## set_ip_pool
-# [Using IP Pools with the SMTP API Header](https://sendgrid.com/docs/API_Reference/Web_API_v3/IP_Management/ip_pools.html)
+# Using IP Pools with the SMTP API Header
+# See: https://sendgrid.com/docs/API_Reference/Web_API_v3/IP_Management/ip_pools.html)
 header.set_ip_pool('test_pool')
 
 print header.to_json

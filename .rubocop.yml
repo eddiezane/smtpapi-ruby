@@ -22,7 +22,7 @@ RegexpLiteral:
 
 # Increase the max line number of class
 ClassLength:
-  Max: 200
+  Max: 250
   CountComments: true
 
 CyclomaticComplexity:

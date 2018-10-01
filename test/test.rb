@@ -45,7 +45,7 @@ class SmtpapiTest < Test::Unit::TestCase
   def test_add_substitution
     header = Smtpapi::Header.new
     header.add_substitution('keep', ['secret'])
-    header.add_substitution('other', %w[one two])
+    header.add_substitution('other', %w(one two))
     assert_equal(
       '{"sub":{"keep":["secret"],"other":["one","two"]}}',
       header.json_string
@@ -101,7 +101,7 @@ class SmtpapiTest < Test::Unit::TestCase
 
   def test_set_categories
     header = Smtpapi::Header.new
-    header.set_categories(%w[tactics advanced])
+    header.set_categories(%w(tactics advanced))
     assert_equal('{"category":["tactics","advanced"]}', header.json_string)
   end
 
