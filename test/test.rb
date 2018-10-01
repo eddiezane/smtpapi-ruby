@@ -206,16 +206,16 @@ class SmtpapiTest < Test::Unit::TestCase
     assert_equal('{"ip_pool":"test_pool"}', header.json_string)
   end
 
-  def test_docker_exists
-    assert(File.file?('./Dockerfile') || File.file?('./docker/Dockerfile'))
-  end
+  # def test_docker_exists
+  #   assert(File.file?('./Dockerfile') || File.file?('./docker/Dockerfile'))
+  # end
 
-  def test_docker_compose_exists
-    assert(
-      File.file?('./docker-compose.yml') ||
-      File.file?('./docker/docker-compose.yml')
-    )
-  end
+  # def test_docker_compose_exists
+  #   assert(
+  #     File.file?('./docker-compose.yml') ||
+  #     File.file?('./docker/docker-compose.yml')
+  #   )
+  # end
 
   def test_env_sample_exists
     assert(File.file?('./.env_sample'))
@@ -265,13 +265,13 @@ class SmtpapiTest < Test::Unit::TestCase
     assert(File.file?('./TROUBLESHOOTING.md'))
   end
 
-  def test_usage_exists
-    assert(File.file?('./USAGE.md'))
-  end
+  # def test_usage_exists
+  #   assert(File.file?('./USAGE.md'))
+  # end
 
-  def test_use_cases_exists
-    assert(File.file?('./USE_CASES.md'))
-  end
+  # def test_use_cases_exists
+  #   assert(File.file?('./USE_CASES.md'))
+  # end
 
   def test_license_date_is_updated
     license_end_year = IO.read('LICENSE.txt').match(
