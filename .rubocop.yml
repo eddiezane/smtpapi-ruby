@@ -17,23 +17,16 @@ AbcSize:
   Max: 34
 
 # Increase max number of "/" in %r
-Style/RegexpLiteral:
-  AllowInnerSlashes: false
+RegexpLiteral:
+  MaxSlashes: 0
 
 # Increase the max line number of class
 ClassLength:
   Max: 200
   CountComments: true
-  Exclude:
-    - 'test/test.rb'
 
 CyclomaticComplexity:
   Max: 11
 
 PerceivedComplexity:
   Max: 11
-
-# Ignore line length warnings for comments
-Metrics/LineLength:
-  Max: 80
-  IgnoredPatterns: ['\A#']
