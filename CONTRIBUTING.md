@@ -119,8 +119,6 @@ rake test
 
 Generally, we follow the style guidelines as suggested by the official language. However, we ask that you conform to the styles that already exist in the library. If you wish to deviate, please explain your reasoning.
 
-Generally, we follow the style guidelines as suggested by the official language. However, we ask that you conform to the styles that already exist in the library. If you wish to deviate, please explain your reasoning.
-
 - [Community Driven Style Guide](https://github.com/bbatsov/ruby-style-guide)
 
 Please run your code through:
