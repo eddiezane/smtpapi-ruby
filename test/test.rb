@@ -275,7 +275,7 @@ class SmtpapiTest < Test::Unit::TestCase
 
   def test_license_date_is_updated
     license_end_year = IO.read('LICENSE.txt').match(
-      /Copyright \(c\) \d{4}-(\d{4}) SendGrid/
+      /Copyright \(c\) \d{4}-(\d{4}) Twilio SendGrid/
     )[1]
     current_year = Time.new.year
 
