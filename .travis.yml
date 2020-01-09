@@ -1,27 +1,23 @@
 language: ruby
 rvm:
-  - ruby-head
-  - 2.6
-  - 2.5
-  - 2.4
-  - jruby
-
+- ruby-head
+- 2.6
+- 2.5
+- 2.4
+- jruby
 before_script:
-  - bundle install
-
+- bundle install
 script:
-  - rubocop --fail-level=W
-  - rake test
-
+- rubocop --fail-level=W
+- rake test
 matrix:
   allow_failures:
   - rvm: ruby-head
   fast_finish: true
-
 deploy:
   provider: rubygems
   api_key:
-    secure: CWlfN170i/fHPrIufHHLWQ0utjuhxf4ELSxKeypIuO2CNTqNMzocDAa2vxMt4XfO6d2wFPV/LC+IHR7i+sp7PKvjRoa4BLUUxjfBNDboc0gGESeUYlAxwsJo0tOVCNmpxgjQKqtPLz/19A/v/xpxLv2Im/9Idqa5ATd06sMDdM8=
+    secure: PRNz0pPyO99KdYcQ1WKkunc3TOz1N5ZmdT997KlzRYa5uos+IFqr5UsztJzOrus5iWoQdKKtLGSRYe1SFnXDkSOwK61Q5YvYdSqF3OE/QD63qHub+is4CxmfMmXg+eBGreSH+kIWlSD8N3ic2CDZR8JoQmhPcit6zCZSN3WVRfY=
   gem: smtpapi-ruby
   on:
     tags: true
