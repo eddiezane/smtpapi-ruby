@@ -18,7 +18,7 @@ deploy:
   provider: rubygems
   api_key:
     secure: PRNz0pPyO99KdYcQ1WKkunc3TOz1N5ZmdT997KlzRYa5uos+IFqr5UsztJzOrus5iWoQdKKtLGSRYe1SFnXDkSOwK61Q5YvYdSqF3OE/QD63qHub+is4CxmfMmXg+eBGreSH+kIWlSD8N3ic2CDZR8JoQmhPcit6zCZSN3WVRfY=
-  gem: smtpapi-ruby
+  gem: smtpapi
   on:
     tags: true
     rvm: '2.4'
