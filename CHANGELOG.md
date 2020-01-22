@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+[2020-01-22] Version 0.1.3
+--------------------------
+**Library - Fix**
+- [PR #94](https://github.com/sendgrid/smtpapi-ruby/pull/94): add skip_cleanup flag to fix travis deploy. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+
+
 [2020-01-22] Version 0.1.2
 --------------------------
 **Library - Docs**
