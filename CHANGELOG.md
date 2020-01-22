@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+[2020-01-22] Version 0.1.2
+--------------------------
+**Library - Docs**
+- [PR #93](https://github.com/sendgrid/smtpapi-ruby/pull/93): baseline all the templated markdown docs. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+
+
 [2020-01-09] Version 0.1.1
 --------------------------
 **Library - Chore**
