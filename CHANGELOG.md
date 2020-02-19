@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+[2020-02-19] Version 0.1.4
+--------------------------
+**Library - Chore**
+- [PR #87](https://github.com/sendgrid/smtpapi-ruby/pull/87): Add test coverage analysis. Thanks to [@RolandBurrows](https://github.com/RolandBurrows)!
+
+
 [2020-01-22] Version 0.1.3
 --------------------------
 **Library - Fix**
