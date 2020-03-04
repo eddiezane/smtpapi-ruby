@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+[2020-03-04] Version 0.1.5
+--------------------------
+**Library - Chore**
+- [PR #95](https://github.com/sendgrid/smtpapi-ruby/pull/95): add Ruby 2.7 to Travis. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+
+
 [2020-02-19] Version 0.1.4
 --------------------------
 **Library - Chore**
