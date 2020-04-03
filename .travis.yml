@@ -24,3 +24,11 @@ deploy:
     tags: true
     rvm: '2.4'
     skip_cleanup: true
+
+notifications:
+  slack:
+    if: branch = master
+    on_success: never
+    on_failure: change
+    rooms:
+      - secure: kyDurUDtXcp+6SfpFeszmzRZEpl2IOFqevGelhKVfx7j+M+p1wvPCkv9vnSdpKaZbQ80EKORxS4ZsnKUL9/yOP2uF9mrzB/DCfzFynw/IVfBejM8nkbf/CmosFh0SkkLuwotaPeqMhAtg1J8Avk1HVKJmihaJfkD6kzQ3PSyKlw=
