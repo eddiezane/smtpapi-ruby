@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+[2020-07-22] Version 0.1.6
+--------------------------
+**Library - Docs**
+- [PR #82](https://github.com/sendgrid/smtpapi-ruby/pull/82): Create usage.md file. Thanks to [@prathamsharma92](https://github.com/prathamsharma92)!
+- [PR #83](https://github.com/sendgrid/smtpapi-ruby/pull/83): add code review section in contributions. Thanks to [@prathamsharma92](https://github.com/prathamsharma92)!
+
+
 [2020-03-04] Version 0.1.5
 --------------------------
 **Library - Chore**
