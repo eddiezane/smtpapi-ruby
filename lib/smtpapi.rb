@@ -81,9 +81,7 @@ module Smtpapi
 
     def add_filter(filter_name, parameter_name, parameter_value)
       @filters[filter_name] = {} if @filters[filter_name].nil?
-      if @filters[filter_name]['settings'].nil?
-        @filters[filter_name]['settings'] = {}
-      end
+      @filters[filter_name]['settings'] = {} if @filters[filter_name]['settings'].nil?
       @filters[filter_name]['settings'][parameter_name] = parameter_value
       self
     end
@@ -140,7 +138,8 @@ module Smtpapi
     def json_string
       escape_unicode(to_array.to_json)
     end
-    alias_method :to_json, :json_string
+
+    alias :to_json :json_string
 
     def escape_unicode(str)
       str.unpack('U*').map do |i|
